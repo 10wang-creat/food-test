@@ -746,8 +746,13 @@
             
             if (newQty === 0) {
                 delete cart[itemId];
+                delete cartOptions[itemId]; // 清除選項
             } else {
                 cart[itemId] = newQty;
+                // 確保選項物件存在
+                if (!cartOptions[itemId]) {
+                    cartOptions[itemId] = { selectedOptions: [] };
+                }
             }
             
             // 重新渲染當前分類
