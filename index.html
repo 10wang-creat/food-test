@@ -949,9 +949,6 @@
             cart.push(item);
             updateCartDisplay();
             closeModal();
-            
-            // 顯示加入成功提示
-            alert(`${item.name} 已加入購物車！`);
         }
 
         function updateCartDisplay() {
@@ -1085,7 +1082,7 @@
             orderText += `👤 顧客姓名：${customerName}\n`;
             orderText += `📞 聯絡電話：${customerPhone}\n\n`;
             
-            orderText += '🛒 點餐內容：\n';
+            orderText += '🛒 訂購明細：\n';
             orderText += '-'.repeat(30) + '\n';
             
             // 統計商品總數量
