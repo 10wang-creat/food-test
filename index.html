@@ -1,9 +1,108 @@
-<!DOCTYPE html>
+<div class="menu-item">
+                    <div class="item-name">麻油高麗菜湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="60" onclick="selectPrice('sesame-1', this, 60)">湯品 $60</div>
+                        <div class="price-option" data-price="80" onclick="selectPrice('sesame-1', this, 80)">加麵線 $80</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-1', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-1">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-1', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油米血湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="60" onclick="selectPrice('sesame-2', this, 60)">湯品 $60</div>
+                        <div class="price-option" data-price="80" onclick="selectPrice('sesame-2', this, 80)">加麵線 $80</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-2', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-2">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-2', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油腰內肉湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="90" onclick="selectPrice('sesame-3', this, 90)">湯品 $90</div>
+                        <div class="price-option" data-price="110" onclick="selectPrice('sesame-3', this, 110)">加麵線 $110</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加米酒</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-3', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-3">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-3', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油雞湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="130" onclick="selectPrice('sesame-4', this, 130)">湯品 $130</div>
+                        <div class="price-option" data-price="150" onclick="selectPrice('sesame-4', this, 150)">加麵線 $150</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加米酒</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-4', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-4">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-4', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油腰子湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="150" onclick="selectPrice('sesame-5', this, 150)">湯品 $150</div>
+                        <div class="price-option" data-price="170" onclick="selectPrice('sesame-5', this, 170)">加麵線 $170</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加米酒</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-5', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-5">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-5', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油雞+腰子湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="180" onclick="selectPrice('sesame-6', this, 180)">湯品 $180</div>
+                        <div class="price-option" data-price="200" onclick="selectPrice('sesame-6', this, 200)">加麵線 $200</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加米酒</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-6', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-6">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-6', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">藥膳雞湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="130" onclick="selectPrice('sesame-7', this, 130)">湯品 $130</div>
+                        <div class="price-option" data-price="150" onclick="selectPrice('sesame-7', this, 150)">加麵線 $150</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-7', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-7">0</span>
+                <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>姐妹小吃 - 電子菜單</title>
+    <title>姊妹小吃 - 電子菜單</title>
     <style>
         * {
             margin: 0;
@@ -13,1325 +112,1282 @@
 
         body {
             font-family: 'Microsoft JhengHei', Arial, sans-serif;
-            background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
             min-height: 100vh;
-            line-height: 1.6;
-            padding-bottom: 100px; /* 為底部購物車留空間 */
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
         }
 
         .header {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
             color: white;
-            text-align: center;
             padding: 20px;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            text-align: center;
+            position: relative;
         }
 
-        .logo {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 5px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .subtitle {
-            font-size: 1.2em;
-            opacity: 0.9;
-            white-space: nowrap; /* 防止換行 */
-            overflow: hidden; /* 隱藏溢出的文字 */
-            text-overflow: ellipsis; /* 如果太長顯示省略號 */
-        }
-
-        /* 頂部固定分類導航 */
-        .category-nav {
-            position: sticky;
+        .header::before {
+            content: '';
+            position: absolute;
             top: 0;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 50;
-            padding: 15px 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="80" r="2.5" fill="rgba(255,255,255,0.1)"/></svg>');
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
         }
 
         .category-tabs {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            background: #f8f9fa;
+            padding: 10px;
             gap: 8px;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-            flex-wrap: nowrap;
         }
 
-        .category-tab {
-            background: #f8f9fa;
-            border: 2px solid #dee2e6;
-            border-radius: 25px;
-            padding: 12px 20px;
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #6c757d;
+        .tab {
+            flex: 1;
+            min-width: calc(50% - 4px);
+            padding: 12px 8px;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            white-space: nowrap;
-            text-align: center;
-            flex: 1;
-            min-width: 0;
+            font-weight: 600;
+            font-size: 14px;
         }
 
-        .category-tab.active {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+        .tab.active {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
             color: white;
-            border-color: #ff6b35;
+            border-color: #ee5a52;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 8px 16px rgba(238,90,82,0.3);
         }
 
-        .category-tab:hover:not(.active) {
-            background: #e9ecef;
-            border-color: #adb5bd;
-            transform: translateY(-1px);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+        .menu-content {
             padding: 20px;
+            max-height: 60vh;
+            overflow-y: auto;
         }
 
-        .menu-items {
+        .menu-category {
             display: none;
-            animation: fadeIn 0.3s ease-in-out;
         }
 
-        .menu-items.active {
+        .menu-category.active {
             display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .category-title {
-            font-size: 2em;
-            color: #d35400;
-            text-align: center;
-            margin: 20px 0 30px 0;
-            font-weight: bold;
-        }
-
-        .item-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
         }
 
         .menu-item {
             background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            cursor: pointer;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 1px solid #f1f3f4;
             transition: all 0.3s ease;
-            border: 3px solid transparent;
         }
 
         .menu-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            border-color: #ff6b35;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 15px;
         }
 
         .item-name {
-            font-size: 1.6em;
-            font-weight: bold;
-            color: #d35400;
-            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
         }
 
         .item-price {
-            font-size: 1.4em;
+            font-size: 20px;
+            font-weight: 700;
             color: #e74c3c;
-            font-weight: bold;
         }
 
-        .item-options {
-            margin-top: 15px;
-            color: #666;
-            font-size: 1.1em;
+        .price-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
         }
 
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 30px;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 500px;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-
-        .modal-title {
-            font-size: 2em;
-            color: #d35400;
-            margin-bottom: 20px;
+        .price-option {
+            flex: 1;
             text-align: center;
-        }
-
-        .option-group {
-            margin: 20px 0;
-            padding: 15px;
-            background: #fff5e6;
-            border-radius: 10px;
-        }
-
-        .option-title {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #e67e22;
-            margin-bottom: 10px;
-        }
-
-        .option-btn {
-            background: #ecf0f1;
-            border: 2px solid #bdc3c7;
-            padding: 12px 20px;
-            margin: 5px;
+            padding: 8px;
+            background: #f8f9fa;
             border-radius: 8px;
+            font-weight: 600;
             cursor: pointer;
-            font-size: 1.1em;
             transition: all 0.3s ease;
-            position: relative;
+            border: 2px solid transparent;
         }
 
-        .option-btn.selected {
-            background: #ff6b35;
-            color: white;
-            border-color: #e55a2b;
-        }
-
-        .option-btn:hover {
-            background: #d5dbdb;
+        .price-option:hover {
+            background: #e3f2fd;
             transform: translateY(-1px);
         }
 
-        .option-btn.selected:hover {
-            background: #e55a2b;
+        .price-option.selected {
+            background: #1976d2;
+            color: white;
+            border-color: #1565c0;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(25,118,210,0.3);
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .option {
+            padding: 8px 12px;
+            background: #e3f2fd;
+            color: #1976d2;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .option:hover, .option.selected {
+            background: #1976d2;
+            color: white;
+            transform: scale(1.05);
         }
 
         .quantity-control {
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-            font-size: 1.4em;
+            justify-content: space-between;
         }
 
-        .qty-btn {
-            background: #ff6b35;
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            font-size: 1.5em;
+            border: none;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
             cursor: pointer;
-            margin: 0 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .qty-display {
-            font-size: 2em;
-            font-weight: bold;
-            color: #d35400;
-            min-width: 50px;
+        .quantity-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(238,90,82,0.4);
+        }
+
+        .quantity-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .quantity {
+            font-size: 18px;
+            font-weight: 700;
+            min-width: 30px;
             text-align: center;
         }
 
-        .add-to-cart-btn {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.4em;
-            font-weight: bold;
-            border-radius: 10px;
-            cursor: pointer;
-            width: 100%;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-        }
-
-        .add-to-cart-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
-        }
-
-        /* 購物車區域 */
-        .cart-section {
+        .cart {
             position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
             color: white;
-            padding: 15px 20px;
-            box-shadow: 0 -4px 15px rgba(231, 76, 60, 0.4);
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .cart-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .cart-icon-large {
-            font-size: 2em;
-        }
-
-        .cart-text {
-            font-size: 1.3em;
-            font-weight: bold;
-        }
-
-        .cart-count-large {
-            background: #f39c12;
-            color: white;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            font-size: 1.2em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .checkout-quick-btn {
-            background: #27ae60;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 1.2em;
-            font-weight: bold;
-            border-radius: 8px;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(46,204,113,0.4);
             cursor: pointer;
+            font-weight: 700;
+            font-size: 16px;
+            border: none;
             transition: all 0.3s ease;
-            animation: pulse 2s infinite;
+            z-index: 1000;
+            min-width: 200px;
+            text-align: center;
         }
 
-        .checkout-quick-btn:hover {
-            background: #2ecc71;
-            transform: translateY(-2px);
+        .cart:hover {
+            transform: translateX(-50%) translateY(-3px);
+            box-shadow: 0 12px 30px rgba(46,204,113,0.5);
         }
 
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(39, 174, 96, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
-        }
-
-        .cart-view {
+        .cart.hidden {
             display: none;
-            padding-bottom: 100px;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         .cart-item {
-            background: white;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
         }
 
-        .cart-item-info {
-            flex: 1;
+        .cart-item:last-child {
+            border-bottom: none;
         }
 
-        .cart-item-name {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #d35400;
-        }
-
-        .cart-item-options {
-            color: #666;
-            font-size: 1em;
-            margin: 5px 0;
-        }
-
-        .cart-item-price {
-            font-size: 1.2em;
+        .cart-total {
+            font-size: 20px;
+            font-weight: 700;
             color: #e74c3c;
-            font-weight: bold;
-        }
-
-        .remove-btn {
-            background: #e74c3c;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-left: 10px;
-        }
-
-        .total-section {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
             text-align: center;
             margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
         }
 
-        .total-price {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        /* LINE 訂單傳送按鈕 */
-        .checkout-buttons {
+        .modal-buttons {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            gap: 10px;
             margin-top: 20px;
         }
 
-        .line-btn {
-            background: #00C300;
-            color: white;
-            border: none;
-            padding: 20px 40px;
-            font-size: 1.6em;
-            font-weight: bold;
-            border-radius: 10px;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s ease;
-        }
-
-        .line-btn:hover {
-            background: #00A300;
-            transform: translateY(-2px);
-        }
-
-        /* 顧客資訊表單 */
-        .customer-info {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 20px 0;
-        }
-
-        .info-section {
-            margin-bottom: 20px;
-        }
-
-        .info-title {
-            font-size: 1.4em;
-            font-weight: bold;
-            color: #d35400;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .dining-options {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .dining-btn {
+        .modal-btn {
             flex: 1;
-            background: #ecf0f1;
-            border: 2px solid #bdc3c7;
-            padding: 15px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .dining-btn.selected {
-            background: #ff6b35;
-            color: white;
-            border-color: #e55a2b;
-        }
-
-        .dining-btn:hover:not(.selected) {
-            background: #d5dbdb;
-            transform: translateY(-1px);
-        }
-
-        .input-group {
-            margin-bottom: 15px;
-        }
-
-        .input-label {
-            display: block;
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #555;
-            margin-bottom: 8px;
-        }
-
-        .input-field {
-            width: 100%;
             padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 1.1em;
-            transition: border-color 0.3s ease;
-        }
-
-        .input-field:focus {
-            outline: none;
-            border-color: #ff6b35;
-            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
-        }
-
-        .required {
-            color: #e74c3c;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close:hover {
-            color: #000;
-        }
-
-        .cart-section.has-items {
-            display: flex;
-        }
-
-        .cart-section.empty {
-            display: none;
-        }
-
-        .back-to-menu-btn {
-            background: #8e44ad;
-            color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border-radius: 10px;
+            border-radius: 12px;
+            font-weight: 700;
             cursor: pointer;
-            margin-bottom: 20px;
             transition: all 0.3s ease;
         }
 
-        .back-to-menu-btn:hover {
-            background: #9b59b6;
+        .modal-btn.primary {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+        }
+
+        .modal-btn.secondary {
+            background: #bdc3c7;
+            color: white;
+        }
+
+        .modal-btn:hover {
             transform: translateY(-2px);
         }
 
-        @media (max-width: 768px) {
-            .logo {
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 12px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                border-radius: 0;
+                min-height: 100vh;
+            }
+            
+            .header h1 {
                 font-size: 2em;
             }
             
-            .subtitle {
-                font-size: 1em; /* 在小螢幕上稍微減小字體 */
-                padding: 0 10px; /* 增加左右內距 */
-            }
-            
-            .category-tabs {
-                padding: 0 15px;
-                gap: 6px;
-            }
-            
-            .category-tab {
-                font-size: 1em;
-                padding: 10px 15px;
-                flex: 1;
-                min-width: 0;
-            }
-            
-            .item-name {
-                font-size: 1.4em;
-            }
-            
-            .item-price {
-                font-size: 1.2em;
-            }
-
-            .cart-text {
-                font-size: 1.1em;
-            }
-
-            .checkout-quick-btn {
-                font-size: 1em;
-                padding: 10px 20px;
-            }
-
-            .category-title {
-                font-size: 1.6em;
-            }
-
-            .line-btn {
-                font-size: 1.3em;
-                padding: 15px 30px;
-            }
-
-            .customer-info {
-                padding: 20px;
-            }
-
-            .info-title {
-                font-size: 1.2em;
-            }
-
-            .dining-btn {
-                font-size: 1.1em;
-                padding: 12px 15px;
-            }
-
-            .input-field {
-                padding: 12px;
-                font-size: 1em;
-            }
-        }
-
-        /* 針對極小螢幕的額外調整 */
-        @media (max-width: 480px) {
-            .subtitle {
-                font-size: 0.9em; /* 進一步減小字體 */
-                line-height: 1.3; /* 調整行高 */
-            }
-            
-            .header {
-                padding: 15px 10px; /* 減少內距 */
-            }
-        }
-
-        /* 針對極小螢幕（320px寬度）的特殊調整 */
-        @media (max-width: 350px) {
-            .subtitle {
-                font-size: 0.8em; /* 更小的字體 */
-                padding: 0 5px; /* 更小的內距 */
+            .tab {
+                font-size: 12px;
+                padding: 10px 6px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">🍜 姐妹小吃</div>
-        <div class="subtitle">炒麵/炒米粉/麻油麵線專賣 · 手機點餐免排隊</div>
-    </div>
-
-    <!-- 頂部固定分類導航 -->
-    <div class="category-nav">
-        <div class="category-tabs">
-            <button class="category-tab active" onclick="showCategory('noodles')">
-                麵飯類
-            </button>
-            <button class="category-tab" onclick="showCategory('soups')">
-                湯品類
-            </button>
-            <button class="category-tab" onclick="showCategory('sides')">
-                小菜類
-            </button>
-            <button class="category-tab" onclick="showCategory('herbal')">
-                藥膳類
-            </button>
-        </div>
-    </div>
-
     <div class="container">
-        <!-- 麵飯類 -->
-        <div id="noodles" class="menu-items active">
-            <div class="category-title">🍜 麵飯類</div>
-            <div class="item-grid">
-                <div class="menu-item" onclick="showItemModal('綜合麵', 50, ['不加蒜泥', '小份$50', '大份$60'])">
-                    <div class="item-name">綜合麵(米粉+麵)</div>
-                    <div class="item-price">小份$50 / 大份$60</div>
-                    <div class="item-options">可選：不加蒜泥、分量</div>
+        <div class="header">
+            <h1>姊妹小吃</h1>
+            <p>炒麵/炒米粉/麻油麵線專賣 · 手機點餐免排隊</p>
+        </div>
+
+        <div class="category-tabs">
+            <div class="tab active" onclick="showCategory('noodles')">麵飯類</div>
+            <div class="tab" onclick="showCategory('soups')">湯品類</div>
+            <div class="tab" onclick="showCategory('sesame')">麻油/藥膳</div>
+            <div class="tab" onclick="showCategory('sides')">小菜類</div>
+        </div>
+
+        <div class="menu-content">
+            <!-- 麵飯類 -->
+            <div id="noodles" class="menu-category active">
+                <div class="section-title">🍜 麵飯類</div>
+                
+                <div class="menu-item">
+                    <div class="item-name">綜合(米粉+麵)</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="50" onclick="selectPrice('noodles-1', this, 50)">小 $50</div>
+                        <div class="price-option" data-price="60" onclick="selectPrice('noodles-1', this, 60)">大 $60</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">不加蒜泥</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-1', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-1">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-1', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('炒麵', 50, ['不加蒜泥', '小份$50', '大份$60'])">
+
+                <div class="menu-item">
                     <div class="item-name">炒麵</div>
-                    <div class="item-price">小份$50 / 大份$60</div>
-                    <div class="item-options">可選：不加蒜泥、分量</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="50" onclick="selectPrice('noodles-2', this, 50)">小 $50</div>
+                        <div class="price-option" data-price="60" onclick="selectPrice('noodles-2', this, 60)">大 $60</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">不加蒜泥</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-2', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-2">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-2', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('炒米粉', 50, ['不加蒜泥', '小份$50', '大份$60'])">
+
+                <div class="menu-item">
                     <div class="item-name">炒米粉</div>
-                    <div class="item-price">小份$50 / 大份$60</div>
-                    <div class="item-options">可選：不加蒜泥、分量</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="50" onclick="selectPrice('noodles-3', this, 50)">小 $50</div>
+                        <div class="price-option" data-price="60" onclick="selectPrice('noodles-3', this, 60)">大 $60</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">不加蒜泥</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-3', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-3">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-3', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('切仔乾麵', 50, ['油麵', '意麵', '米粉', '小份$50', '大份$60'])">
+
+                <div class="menu-item">
                     <div class="item-name">切仔乾麵</div>
-                    <div class="item-price">小份$50 / 大份$60</div>
-                    <div class="item-options">麵條：油麵、意麵、米粉</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="50" onclick="selectPrice('noodles-4', this, 50)">小 $50</div>
+                        <div class="price-option" data-price="60" onclick="selectPrice('noodles-4', this, 60)">大 $60</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">油麵</div>
+                        <div class="option">意麵</div>
+                        <div class="option">米粉</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-4', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-4">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-4', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('切仔湯麵', 50, ['油麵', '意麵', '米粉', '小份$50', '大份$60'])">
+
+                <div class="menu-item">
                     <div class="item-name">切仔湯麵</div>
-                    <div class="item-price">小份$50 / 大份$60</div>
-                    <div class="item-options">麵條：油麵、意麵、米粉</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="50" onclick="selectPrice('noodles-5', this, 50)">小 $50</div>
+                        <div class="price-option" data-price="60" onclick="selectPrice('noodles-5', this, 60)">大 $60</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">油麵</div>
+                        <div class="option">意麵</div>
+                        <div class="option">米粉</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-5', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-5">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-5', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('滷肉飯', 50, ['加辣', '小份$50', '大份$60'])">
+
+                <div class="menu-item">
                     <div class="item-name">滷肉飯</div>
-                    <div class="item-price">小份$50 / 大份$60</div>
-                    <div class="item-options">可選：加辣、分量</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="50" onclick="selectPrice('noodles-6', this, 50)">小 $50</div>
+                        <div class="price-option" data-price="60" onclick="selectPrice('noodles-6', this, 60)">大 $60</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加辣</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-6', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-6">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-6', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('抄手', 70, ['加辣', '小份$70'])">
+
+                <div class="menu-item">
                     <div class="item-name">抄手</div>
                     <div class="item-price">$70</div>
-                    <div class="item-options">可選：加辣</div>
+                    <div class="options">
+                        <div class="option">加辣</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-7', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-7">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-7', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('爌肉飯', 70, ['加辣', '小份$70', '大份$80'])">
+
+                <div class="menu-item">
                     <div class="item-name">爌肉飯</div>
-                    <div class="item-price">小份$70 / 大份$80</div>
-                    <div class="item-options">可選：加辣、分量</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="70" onclick="selectPrice('noodles-8', this, 70)">小 $70</div>
+                        <div class="price-option" data-price="80" onclick="selectPrice('noodles-8', this, 80)">大 $80</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加辣</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-8', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-8">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-8', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('豬腳飯', 100, ['加辣', '小份$100', '大份$120'])">
+
+                <div class="menu-item">
                     <div class="item-name">豬腳飯</div>
-                    <div class="item-price">小份$100 / 大份$120</div>
-                    <div class="item-options">可選：加辣、分量</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="100" onclick="selectPrice('noodles-9', this, 100)">小 $100</div>
+                        <div class="price-option" data-price="120" onclick="selectPrice('noodles-9', this, 120)">大 $120</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加辣</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-9', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-9">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-9', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('豬腳麵線', 100, ['加辣', '小份$100', '大份$120'])">
+
+                <div class="menu-item">
                     <div class="item-name">豬腳麵線</div>
-                    <div class="item-price">小份$100 / 大份$120</div>
-                    <div class="item-options">可選：加辣、分量</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="100" onclick="selectPrice('noodles-10', this, 100)">小 $100</div>
+                        <div class="price-option" data-price="120" onclick="selectPrice('noodles-10', this, 120)">大 $120</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加辣</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-10', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-10">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-10', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('牛肉麵', 130, ['刀削', '油麵', '拉麵', '陽春', '意麵', '小份$130', '大份$150'])">
+
+                <div class="menu-item">
                     <div class="item-name">牛肉麵</div>
-                    <div class="item-price">小份$130 / 大份$150</div>
-                    <div class="item-options">麵條：刀削、油麵、拉麵、陽春、意麵</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="130" onclick="selectPrice('noodles-11', this, 130)">小 $130</div>
+                        <div class="price-option" data-price="150" onclick="selectPrice('noodles-11', this, 150)">大 $150</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">刀削</div>
+                        <div class="option">油麵</div>
+                        <div class="option">拉麵</div>
+                        <div class="option">陽春</div>
+                        <div class="option">意麵</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-11', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-11">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-11', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('滷肉便當', 100, [])">
+
+                <div class="menu-item">
                     <div class="item-name">滷肉便當</div>
                     <div class="item-price">$100</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-12', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-12">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-12', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('爌肉便當', 130, [])">
+
+                <div class="menu-item">
                     <div class="item-name">爌肉便當</div>
                     <div class="item-price">$130</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-13', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-13">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-13', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('豬腳便當', 130, [])">
+
+                <div class="menu-item">
                     <div class="item-name">豬腳便當</div>
                     <div class="item-price">$130</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-14', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-14">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-14', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('排骨便當', 130, [])">
+
+                <div class="menu-item">
                     <div class="item-name">排骨便當</div>
                     <div class="item-price">$130</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-15', -1)">-</button>
+                        <span class="quantity" id="qty-noodles-15">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('noodles-15', 1)">+</button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 湯品類 -->
-        <div id="soups" class="menu-items">
-            <div class="category-title">🍲 湯品類</div>
-            <div class="item-grid">
-                <div class="menu-item" onclick="showItemModal('豬血湯', 40, [])">
+            <!-- 湯品類 -->
+            <div id="soups" class="menu-category">
+                <div class="section-title">🍲 湯品類</div>
+                
+                <div class="menu-item">
                     <div class="item-name">豬血湯</div>
                     <div class="item-price">$40</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('soups-1', -1)">-</button>
+                        <span class="quantity" id="qty-soups-1">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('soups-1', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('貢丸湯', 50, ['湯品$50', '加麵$60', '加油麵', '加米粉', '加意麵'])">
+
+                <div class="menu-item">
                     <div class="item-name">貢丸湯</div>
-                    <div class="item-price">湯品$50 / 加麵$60</div>
-                    <div class="item-options">可加：油麵、米粉、意麵</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="50" onclick="selectPrice('soups-2', this, 50)">湯品 $50</div>
+                        <div class="price-option" data-price="60" onclick="selectPrice('soups-2', this, 60)">加麵 $60</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加油麵</div>
+                        <div class="option">加米粉</div>
+                        <div class="option">加意麵</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('soups-2', -1)">-</button>
+                        <span class="quantity" id="qty-soups-2">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('soups-2', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('豬肝湯', 50, ['湯品$50', '加麵$70', '加油麵', '加米粉', '加意麵'])">
+
+                <div class="menu-item">
                     <div class="item-name">豬肝湯</div>
-                    <div class="item-price">湯品$50 / 加麵$70</div>
-                    <div class="item-options">可加：油麵、米粉、意麵</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="50" onclick="selectPrice('soups-3', this, 50)">湯品 $50</div>
+                        <div class="price-option" data-price="70" onclick="selectPrice('soups-3', this, 70)">加麵 $70</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加油麵</div>
+                        <div class="option">加米粉</div>
+                        <div class="option">加意麵</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('soups-3', -1)">-</button>
+                        <span class="quantity" id="qty-soups-3">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('soups-3', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('餛飩湯', 50, ['湯品$50', '加麵$70', '加油麵', '加米粉', '加意麵'])">
+
+                <div class="menu-item">
                     <div class="item-name">餛飩湯</div>
-                    <div class="item-price">湯品$50 / 加麵$70</div>
-                    <div class="item-options">可加：油麵、米粉、意麵</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="50" onclick="selectPrice('soups-4', this, 50)">湯品 $50</div>
+                        <div class="price-option" data-price="70" onclick="selectPrice('soups-4', this, 70)">加麵 $70</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加油麵</div>
+                        <div class="option">加米粉</div>
+                        <div class="option">加意麵</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('soups-4', -1)">-</button>
+                        <span class="quantity" id="qty-soups-4">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('soups-4', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('腰內肉湯', 70, ['湯品$70', '加麵$90', '加油麵', '加米粉', '加意麵'])">
+
+                <div class="menu-item">
                     <div class="item-name">腰內肉湯</div>
-                    <div class="item-price">湯品$70 / 加麵$90</div>
-                    <div class="item-options">可加：油麵、米粉、意麵</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="70" onclick="selectPrice('soups-5', this, 70)">湯品 $70</div>
+                        <div class="price-option" data-price="90" onclick="selectPrice('soups-5', this, 90)">加麵 $90</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加油麵</div>
+                        <div class="option">加米粉</div>
+                        <div class="option">加意麵</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('soups-5', -1)">-</button>
+                        <span class="quantity" id="qty-soups-5">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('soups-5', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('鱸魚湯', 130, ['湯品$130', '加麵$150', '加米酒', '加油麵', '加米粉'])">
+
+                <div class="menu-item">
                     <div class="item-name">鱸魚湯 (人氣湯品)</div>
-                    <div class="item-price">湯品$130 / 加麵$150</div>
-                    <div class="item-options">可加：米酒、油麵、米粉</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="130" onclick="selectPrice('soups-6', this, 130)">湯品 $130</div>
+                        <div class="price-option" data-price="150" onclick="selectPrice('soups-6', this, 150)">加麵 $150</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加米酒</div>
+                        <div class="option">加油麵</div>
+                        <div class="option">加米粉</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('soups-6', -1)">-</button>
+                        <span class="quantity" id="qty-soups-6">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('soups-6', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油乾麵線</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="60" onclick="selectPrice('soups-7', this, 60)">小 $60</div>
+                        <div class="price-option" data-price="70" onclick="selectPrice('soups-7', this, 70)">大 $70</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('soups-7', -1)">-</button>
+                        <span class="quantity" id="qty-soups-7">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('soups-7', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油湯麵線</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="70" onclick="selectPrice('soups-8', this, 70)">小 $70</div>
+                        <div class="price-option" data-price="80" onclick="selectPrice('soups-8', this, 80)">大 $80</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('soups-8', -1)">-</button>
+                        <span class="quantity" id="qty-soups-8">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('soups-8', 1)">+</button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 小菜類 -->
-        <div id="sides" class="menu-items">
-            <div class="category-title">🥬 小菜類</div>
-            <div class="item-grid">
-                <div class="menu-item" onclick="showItemModal('白飯', 15, [])">
+            <!-- 麻油/藥膳 -->
+            <div id="sesame" class="menu-category">
+                <div class="section-title">🌿 麻油/藥膳/湯品 (四季溫補養身)</div>
+                
+                <div class="menu-item">
+                    <div class="item-name">麻油高麗菜湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="60" onclick="selectPrice('sesame-1', this, 60)">湯品 $60</div>
+                        <div class="price-option" data-price="80" onclick="selectPrice('sesame-1', this, 80)">加麵線 $80</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-1', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-1">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-1', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油米血湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="60" onclick="selectPrice('sesame-2', this, 60)">湯品 $60</div>
+                        <div class="price-option" data-price="80" onclick="selectPrice('sesame-2', this, 80)">加麵線 $80</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-2', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-2">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-2', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油腰內肉湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="90" onclick="selectPrice('sesame-3', this, 90)">湯品 $90</div>
+                        <div class="price-option" data-price="110" onclick="selectPrice('sesame-3', this, 110)">加麵線 $110</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加米酒</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-3', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-3">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-3', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油雞湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="130" onclick="selectPrice('sesame-4', this, 130)">湯品 $130</div>
+                        <div class="price-option" data-price="150" onclick="selectPrice('sesame-4', this, 150)">加麵線 $150</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加米酒</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-4', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-4">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-4', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油腰子湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="150" onclick="selectPrice('sesame-5', this, 150)">湯品 $150</div>
+                        <div class="price-option" data-price="170" onclick="selectPrice('sesame-5', this, 170)">加麵線 $170</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加米酒</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-5', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-5">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-5', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">麻油雞+腰子湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="180" onclick="selectPrice('sesame-6', this, 180)">湯品 $180</div>
+                        <div class="price-option" data-price="200" onclick="selectPrice('sesame-6', this, 200)">加麵線 $200</div>
+                    </div>
+                    <div class="options">
+                        <div class="option">加米酒</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-6', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-6">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-6', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">藥膳雞湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="130" onclick="selectPrice('sesame-7', this, 130)">湯品 $130</div>
+                        <div class="price-option" data-price="150" onclick="selectPrice('sesame-7', this, 150)">加麵線 $150</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-7', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-7">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-7', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">藥膳豬腳湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="130" onclick="selectPrice('sesame-8', this, 130)">湯品 $130</div>
+                        <div class="price-option" data-price="150" onclick="selectPrice('sesame-8', this, 150)">加麵線 $150</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-8', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-8">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-8', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">藥膳羊肉湯</div>
+                    <div class="price-options">
+                        <div class="price-option selected" data-price="130" onclick="selectPrice('sesame-9', this, 130)">湯品 $130</div>
+                        <div class="price-option" data-price="150" onclick="selectPrice('sesame-9', this, 150)">加麵線 $150</div>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-9', -1)">-</button>
+                        <span class="quantity" id="qty-sesame-9">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sesame-9', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 小菜類 -->
+            <div id="sides" class="menu-category">
+                <div class="section-title">🥬 小菜類</div>
+                
+                <div class="menu-item">
                     <div class="item-name">白飯</div>
                     <div class="item-price">$15</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-1', -1)">-</button>
+                        <span class="quantity" id="qty-sides-1">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-1', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('滷蛋', 15, [])">
-                    <div class="item-name">滷蛋</div>
-                    <div class="item-price">$15 /顆</div>
+
+                <div class="menu-item">
+                    <div class="item-name">滷蛋/顆</div>
+                    <div class="item-price">$15</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-2', -1)">-</button>
+                        <span class="quantity" id="qty-sides-2">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-2', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('爌肉切盤', 100, [])">
+
+                <div class="menu-item">
                     <div class="item-name">爌肉切盤</div>
                     <div class="item-price">$100</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-3', -1)">-</button>
+                        <span class="quantity" id="qty-sides-3">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-3', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('炒腰子', 200, [])">
+
+                <div class="menu-item">
                     <div class="item-name">炒腰子</div>
                     <div class="item-price">$200</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-4', -1)">-</button>
+                        <span class="quantity" id="qty-sides-4">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-4', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('燙青菜', 50, [])">
-                    <div class="item-name">燙青菜</div>
-                    <div class="item-price">$50</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('豬腳一份', 130, [])">
-                    <div class="item-name">豬腳一份</div>
-                    <div class="item-price">$130</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('滷白菜', 50, [])">
-                    <div class="item-name">滷白菜</div>
-                    <div class="item-price">$50</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('油豆腐', 40, [])">
+
+                <div class="menu-item">
                     <div class="item-name">油豆腐</div>
                     <div class="item-price">$40</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-5', -1)">-</button>
+                        <span class="quantity" id="qty-sides-5">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-5', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('豬皮', 50, [])">
+
+                <div class="menu-item">
                     <div class="item-name">豬皮</div>
                     <div class="item-price">$50</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-6', -1)">-</button>
+                        <span class="quantity" id="qty-sides-6">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-6', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('燙麻油豬肝', 70, [])">
-                    <div class="item-name">燙麻油豬肝</div>
-                    <div class="item-price">$70</div>
+
+                <div class="menu-item">
+                    <div class="item-name">燙青菜</div>
+                    <div class="item-price">$50</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-7', -1)">-</button>
+                        <span class="quantity" id="qty-sides-7">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-7', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('腰內肉切盤', 100, [])">
-                    <div class="item-name">腰內肉切盤</div>
-                    <div class="item-price">$100</div>
+
+                <div class="menu-item">
+                    <div class="item-name">豬腳一份</div>
+                    <div class="item-price">$130</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-8', -1)">-</button>
+                        <span class="quantity" id="qty-sides-8">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-8', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('滷筍絲', 50, [])">
+
+                <div class="menu-item">
+                    <div class="item-name">小魚乾辣椒醬</div>
+                    <div class="item-price">$50</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-9', -1)">-</button>
+                        <span class="quantity" id="qty-sides-9">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-9', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">滷白菜</div>
+                    <div class="item-price">$50</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-10', -1)">-</button>
+                        <span class="quantity" id="qty-sides-10">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-10', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
                     <div class="item-name">滷筍絲</div>
                     <div class="item-price">$50</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-11', -1)">-</button>
+                        <span class="quantity" id="qty-sides-11">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-11', 1)">+</button>
+                    </div>
                 </div>
-                <div class="menu-item" onclick="showItemModal('小魚乾辣椒醬', 200, [])">
+
+                <div class="menu-item">
+                    <div class="item-name">燙麻油豬肝</div>
+                    <div class="item-price">$70</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-12', -1)">-</button>
+                        <span class="quantity" id="qty-sides-12">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-12', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">腰內肉切盤</div>
+                    <div class="item-price">$100</div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-13', -1)">-</button>
+                        <span class="quantity" id="qty-sides-13">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-13', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
                     <div class="item-name">小魚乾辣椒醬</div>
                     <div class="item-price">$200</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 藥膳類 -->
-        <div id="herbal" class="menu-items">
-            <div class="category-title">🌿 藥膳類</div>
-            <div class="item-grid">
-                <div class="menu-item" onclick="showItemModal('麻油湯麵線', 70, ['小份$60', '大份$70'])">
-                    <div class="item-name">麻油湯麵線</div>
-                    <div class="item-price">小份$60 / 大份$70</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('麻油乾麵線', 70, ['小份$60', '大份$70'])">
-                    <div class="item-name">麻油乾麵線</div>
-                    <div class="item-price">小份$60 / 大份$70</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('麻油高麗菜湯', 60, ['湯品$60', '加麵線$80'])">
-                    <div class="item-name">麻油高麗菜湯</div>
-                    <div class="item-price">湯品$60 / 加麵線$80</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('麻油米血湯', 60, ['湯品$60', '加麵線$80'])">
-                    <div class="item-name">麻油米血湯</div>
-                    <div class="item-price">湯品$60 / 加麵線$80</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('麻油腰內肉湯', 90, ['湯品$90', '加麵線$110', '加米酒'])">
-                    <div class="item-name">麻油腰內肉湯</div>
-                    <div class="item-price">湯品$90 / 加麵線$110</div>
-                    <div class="item-options">可加：米酒</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('麻油雞湯', 130, ['湯品$130', '加麵線$150', '加米酒'])">
-                    <div class="item-name">麻油雞湯</div>
-                    <div class="item-price">湯品$130 / 加麵線$150</div>
-                    <div class="item-options">可加：米酒</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('麻油腰子湯', 150, ['湯品$150', '加麵線$170', '加米酒'])">
-                    <div class="item-name">麻油腰子湯</div>
-                    <div class="item-price">湯品$150 / 加麵線$170</div>
-                    <div class="item-options">可加：米酒</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('麻油雞+腰子湯', 180, ['湯品$180', '加麵線$200', '加米酒'])">
-                    <div class="item-name">麻油雞+腰子湯</div>
-                    <div class="item-price">湯品$180 / 加麵線$200</div>
-                    <div class="item-options">可加：米酒</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('藥膳雞湯', 130, ['湯品$130', '加麵線$150'])">
-                    <div class="item-name">藥膳雞湯</div>
-                    <div class="item-price">湯品$130 / 加麵線$150</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('藥膳豬腳湯', 130, ['湯品$130', '加麵線$150'])">
-                    <div class="item-name">藥膳豬腳湯</div>
-                    <div class="item-price">湯品$130 / 加麵線$150</div>
-                </div>
-                <div class="menu-item" onclick="showItemModal('藥膳羊肉湯', 130, ['湯品$130', '加麵線$150'])">
-                    <div class="item-name">藥膳羊肉湯</div>
-                    <div class="item-price">湯品$130 / 加麵線$150</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 購物車檢視 -->
-        <div id="cart-view" class="cart-view">
-            <button class="back-to-menu-btn" onclick="hideCart()">← 繼續點餐</button>
-            <h2 style="color: #d35400; margin-bottom: 20px; font-size: 2em;">🛒 您的訂單</h2>
-            <div id="cart-items"></div>
-            <div class="total-section">
-                <div>總金額</div>
-                <div class="total-price" id="total-price">$0</div>
-                
-                <!-- 顧客資訊表單 -->
-                <div class="customer-info">
-                    <div class="info-section">
-                        <div class="info-title">
-                            🍽️ 用餐方式
-                        </div>
-                        <div class="dining-options">
-                            <button class="dining-btn" id="dine-in-btn" onclick="selectDiningOption('內用')">
-                                內用
-                            </button>
-                            <button class="dining-btn" id="takeout-btn" onclick="selectDiningOption('外帶')">
-                                外帶
-                            </button>
-                        </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity('sides-14', -1)">-</button>
+                        <span class="quantity" id="qty-sides-14">0</span>
+                        <button class="quantity-btn" onclick="changeQuantity('sides-14', 1)">+</button>
                     </div>
-
-                    <div class="info-section">
-                        <div class="info-title">
-                            👤 顧客資訊
-                        </div>
-                        <div class="input-group">
-                            <label class="input-label" for="customer-name">
-                                姓名 <span class="required">*</span>
-                            </label>
-                            <input type="text" id="customer-name" class="input-field" placeholder="請輸入您的姓名" required>
-                        </div>
-                        <div class="input-group">
-                            <label class="input-label" for="customer-phone">
-                                聯絡電話 <span class="required">*</span>
-                            </label>
-                            <input type="tel" id="customer-phone" class="input-field" placeholder="請輸入聯絡電話" required>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="checkout-buttons">
-                    <button class="line-btn" onclick="sendToLine()">
-                        傳送訂單
-                    </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 餐點選項彈窗 -->
-    <div id="item-modal" class="modal">
+    <!-- 購物車按鈕 -->
+    <button class="cart hidden" id="cartBtn" onclick="showCart()">
+        <span id="cartText">查看購物車</span>
+    </button>
+
+    <!-- 購物車彈窗 -->
+    <div class="modal" id="cartModal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 class="modal-title" id="modal-title"></h2>
-            
-            <div id="options-container"></div>
-            
-            <div class="quantity-control">
-                <button class="qty-btn" onclick="changeQuantity(-1)">-</button>
-                <span class="qty-display" id="quantity">1</span>
-                <button class="qty-btn" onclick="changeQuantity(1)">+</button>
+            <h2>🛒 我的訂單</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total" id="cartTotal">總計: $0</div>
+            <div class="modal-buttons">
+                <button class="modal-btn secondary" onclick="closeCart()">繼續點餐</button>
+                <button class="modal-btn primary" onclick="submitOrder()">確認訂單</button>
             </div>
-            
-            <button class="add-to-cart-btn" onclick="addToCart()">加入購物車</button>
         </div>
-    </div>
-
-    <!-- 購物車區域 -->
-    <div class="cart-section empty" id="cart-section" onclick="showCart()">
-        <div class="cart-info">
-            <div class="cart-icon-large">🛒</div>
-            <div class="cart-text">已點餐點</div>
-            <div class="cart-count-large" id="cart-count">0</div>
-        </div>
-        <button class="checkout-quick-btn" onclick="showCart()">查看訂單</button>
     </div>
 
     <script>
-        let cart = [];
-        let currentItem = {};
-        let quantity = 1;
-        let selectedDiningOption = '';
+        // 購物車資料 - 現在包含價格和選項資訊
+        let cart = {};
+        
+        // 選中的價格和選項
+        let itemPrices = {};
+        let itemOptions = {};
+        
+        // 選擇價格選項
+        function selectPrice(itemId, element, price) {
+            // 移除同一項目中其他價格選項的選中狀態
+            const priceOptions = element.parentElement.querySelectorAll('.price-option');
+            priceOptions.forEach(option => option.classList.remove('selected'));
+            
+            // 設置當前選項為選中
+            element.classList.add('selected');
+            
+            // 儲存選中的價格
+            itemPrices[itemId] = price;
+            
+            // 更新購物車顯示
+            updateCartButton();
+        }
+        const menuItems = {
+            'noodles-1': { name: '綜合(米粉+麵)', prices: { small: 50, large: 60 }, options: ['不加蒜泥'] },
+            'noodles-2': { name: '炒麵', prices: { small: 50, large: 60 }, options: ['不加蒜泥'] },
+            'noodles-3': { name: '炒米粉', prices: { small: 50, large: 60 }, options: ['不加蒜泥'] },
+            'noodles-4': { name: '切仔乾麵', prices: { small: 50, large: 60 }, options: ['油麵', '意麵', '米粉'] },
+            'noodles-5': { name: '切仔湯麵', prices: { small: 50, large: 60 }, options: ['油麵', '意麵', '米粉'] },
+            'noodles-6': { name: '滷肉飯', prices: { small: 50, large: 60 }, options: ['加辣'] },
+            'noodles-7': { name: '抄手', prices: { single: 70 }, options: ['加辣'] },
+            'noodles-8': { name: '爌肉飯', prices: { small: 70, large: 80 }, options: ['加辣'] },
+            'noodles-9': { name: '豬腳飯', prices: { small: 100, large: 120 }, options: ['加辣'] },
+            'noodles-10': { name: '豬腳麵線', prices: { small: 100, large: 120 }, options: ['加辣'] },
+            'noodles-11': { name: '牛肉麵', prices: { small: 130, large: 150 }, options: ['刀削', '油麵', '拉麵', '陽春', '意麵'] },
+            'noodles-12': { name: '滷肉便當', prices: { single: 100 }, options: [] },
+            'noodles-13': { name: '爌肉便當', prices: { single: 130 }, options: [] },
+            'noodles-14': { name: '豬腳便當', prices: { single: 130 }, options: [] },
+            'noodles-15': { name: '排骨便當', prices: { single: 130 }, options: [] },
+            
+            'soups-1': { name: '豬血湯', prices: { single: 40 }, options: [] },
+            'soups-2': { name: '貢丸湯', prices: { soup: 50, noodles: 60 }, options: ['加油麵', '加米粉', '加意麵'] },
+            'soups-3': { name: '豬肝湯', prices: { soup: 50, noodles: 70 }, options: ['加油麵', '加米粉', '加意麵'] },
+            'soups-4': { name: '餛飩湯', prices: { soup: 50, noodles: 70 }, options: ['加油麵', '加米粉', '加意麵'] },
+            'soups-5': { name: '腰內肉湯', prices: { soup: 70, noodles: 90 }, options: ['加油麵', '加米粉', '加意麵'] },
+            'soups-6': { name: '鱸魚湯 (人氣湯品)', prices: { soup: 130, noodles: 150 }, options: ['加米酒', '加油麵', '加米粉'] },
+            'soups-7': { name: '麻油乾麵線', prices: { small: 60, large: 70 }, options: [] },
+            'soups-8': { name: '麻油湯麵線', prices: { small: 70, large: 80 }, options: [] },
+            
+            'sesame-1': { name: '麻油高麗菜湯', prices: { soup: 60, noodles: 80 }, options: [] },
+            'sesame-2': { name: '麻油米血湯', prices: { soup: 60, noodles: 80 }, options: [] },
+            'sesame-3': { name: '麻油腰內肉湯', prices: { soup: 90, noodles: 110 }, options: ['加米酒'] },
+            'sesame-4': { name: '麻油雞湯', prices: { soup: 130, noodles: 150 }, options: ['加米酒'] },
+            'sesame-5': { name: '麻油腰子湯', prices: { soup: 150, noodles: 170 }, options: ['加米酒'] },
+            'sesame-6': { name: '麻油雞+腰子湯', prices: { soup: 180, noodles: 200 }, options: ['加米酒'] },
+            'sesame-7': { name: '藥膳雞湯', prices: { soup: 130, noodles: 150 }, options: [] },
+            'sesame-8': { name: '藥膳豬腳湯', prices: { soup: 130, noodles: 150 }, options: [] },
+            'sesame-9': { name: '藥膳羊肉湯', prices: { soup: 130, noodles: 150 }, options: [] },
+            
+            'sides-1': { name: '白飯', prices: { single: 15 }, options: [] },
+            'sides-2': { name: '滷蛋/顆', prices: { single: 15 }, options: [] },
+            'sides-3': { name: '爌肉切盤', prices: { single: 100 }, options: [] },
+            'sides-4': { name: '炒腰子', prices: { single: 200 }, options: [] },
+            'sides-5': { name: '油豆腐', prices: { single: 40 }, options: [] },
+            'sides-6': { name: '豬皮', prices: { single: 50 }, options: [] },
+            'sides-7': { name: '燙青菜', prices: { single: 50 }, options: [] },
+            'sides-8': { name: '豬腳一份', prices: { single: 130 }, options: [] },
+            'sides-9': { name: '小魚乾辣椒醬', prices: { single: 50 }, options: [] },
+            'sides-10': { name: '滷白菜', prices: { single: 50 }, options: [] },
+            'sides-11': { name: '滷筍絲', prices: { single: 50 }, options: [] },
+            'sides-12': { name: '燙麻油豬肝', prices: { single: 70 }, options: [] },
+            'sides-13': { name: '腰內肉切盤', prices: { single: 100 }, options: [] },
+            'sides-14': { name: '小魚乾辣椒醬', prices: { single: 200 }, options: [] }
+        };
 
+        // 顯示分類
         function showCategory(category) {
-            // 隱藏所有分類內容
-            document.querySelectorAll('.menu-items').forEach(item => {
-                item.classList.remove('active');
+            // 隱藏所有分類
+            document.querySelectorAll('.menu-category').forEach(cat => {
+                cat.classList.remove('active');
+            });
+            
+            // 移除所有標籤的活動狀態
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
             });
             
             // 顯示選中的分類
             document.getElementById(category).classList.add('active');
             
-            // 更新分類標籤狀態
-            document.querySelectorAll('.category-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
+            // 啟動對應的標籤
             event.target.classList.add('active');
-            
-            // 隱藏購物車檢視
-            document.getElementById('cart-view').style.display = 'none';
         }
 
-        function showItemModal(name, basePrice, options) {
-            currentItem = { name, basePrice, currentPrice: basePrice, options, selectedOptions: [] };
-            document.getElementById('modal-title').textContent = name;
-            document.getElementById('quantity').textContent = '1';
-            quantity = 1;
+        // 修改數量
+        function changeQuantity(itemId, change) {
+            const qtyElement = document.getElementById(`qty-${itemId}`);
+            let currentQty = parseInt(qtyElement.textContent);
+            let newQty = Math.max(0, currentQty + change);
             
-            const optionsContainer = document.getElementById('options-container');
-            optionsContainer.innerHTML = '';
+            qtyElement.textContent = newQty;
             
-            if (options.length > 0) {
-                // 分離價格選項和其他選項
-                const priceOptions = options.filter(opt => opt.includes('
-                ));
-                const otherOptions = options.filter(opt => !opt.includes('
-                ));
-                
-                // 價格選項組
-                if (priceOptions.length > 0) {
-                    const priceGroup = document.createElement('div');
-                    priceGroup.className = 'option-group';
-                    
-                    const priceTitle = document.createElement('div');
-                    priceTitle.className = 'option-title';
-                    priceTitle.textContent = '選擇分量/類型：';
-                    priceGroup.appendChild(priceTitle);
-                    
-                    priceOptions.forEach(option => {
-                        const btn = document.createElement('button');
-                        btn.className = 'option-btn';
-                        btn.textContent = option;
-                        btn.onclick = () => selectPriceOption(btn, option);
-                        priceGroup.appendChild(btn);
-                    });
-                    
-                    optionsContainer.appendChild(priceGroup);
-                    
-                    // 預設選擇第一個價格選項
-                    if (priceOptions.length > 0) {
-                        setTimeout(() => {
-                            const firstBtn = priceGroup.querySelector('.option-btn');
-                            selectPriceOption(firstBtn, priceOptions[0]);
-                        }, 0);
-                    }
-                }
-                
-                // 其他選項組
-                if (otherOptions.length > 0) {
-                    const optionGroup = document.createElement('div');
-                    optionGroup.className = 'option-group';
-                    
-                    const optionTitle = document.createElement('div');
-                    optionTitle.className = 'option-title';
-                    optionTitle.textContent = '額外選項：';
-                    optionGroup.appendChild(optionTitle);
-                    
-                    otherOptions.forEach(option => {
-                        const btn = document.createElement('button');
-                        btn.className = 'option-btn';
-                        btn.textContent = option;
-                        btn.onclick = () => toggleOption(btn, option);
-                        optionGroup.appendChild(btn);
-                    });
-                    
-                    optionsContainer.appendChild(optionGroup);
-                }
-            }
-            
-            document.getElementById('item-modal').style.display = 'block';
-        }
-
-        function selectPriceOption(btn, option) {
-            // 清除同組中其他按鈕的選擇狀態
-            const parentGroup = btn.parentElement;
-            parentGroup.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-            
-            // 選擇當前按鈕
-            btn.classList.add('selected');
-            
-            // 移除之前的價格選項
-            currentItem.selectedOptions = currentItem.selectedOptions.filter(opt => !opt.includes('
-                ));
-            
-            // 添加新的價格選項
-            currentItem.selectedOptions.push(option);
-            
-            // 更新價格
-            const priceMatch = option.match(/\$(\d+)/);
-            if (priceMatch) {
-                currentItem.currentPrice = parseInt(priceMatch[1]);
-            }
-        }
-
-        function toggleOption(btn, option) {
-            const isSelected = btn.classList.contains('selected');
-            
-            if (isSelected) {
-                // 取消選擇
-                btn.classList.remove('selected');
-                currentItem.selectedOptions = currentItem.selectedOptions.filter(opt => opt !== option);
+            if (newQty > 0) {
+                cart[itemId] = newQty;
             } else {
-                // 選擇選項
-                btn.classList.add('selected');
-                if (!currentItem.selectedOptions.includes(option)) {
-                    currentItem.selectedOptions.push(option);
-                }
+                delete cart[itemId];
             }
-        }
-
-        function changeQuantity(change) {
-            quantity = Math.max(1, quantity + change);
-            document.getElementById('quantity').textContent = quantity;
-        }
-
-        function closeModal() {
-            document.getElementById('item-modal').style.display = 'none';
-        }
-
-        function addToCart() {
-            const item = {
-                name: currentItem.name,
-                price: currentItem.currentPrice,
-                quantity: quantity,
-                selectedOptions: [...currentItem.selectedOptions],
-                total: currentItem.currentPrice * quantity
-            };
             
-            cart.push(item);
-            updateCartDisplay();
-            closeModal();
+            updateCartButton();
         }
 
-        function updateCartDisplay() {
-            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-            document.getElementById('cart-count').textContent = count;
+        // 更新購物車按鈕
+        function updateCartButton() {
+            const cartBtn = document.getElementById('cartBtn');
+            const cartText = document.getElementById('cartText');
             
-            const cartSection = document.getElementById('cart-section');
-            if (count > 0) {
-                cartSection.className = 'cart-section has-items';
+            const totalItems = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+            const totalPrice = calculateTotal();
+            
+            if (totalItems > 0) {
+                cartBtn.classList.remove('hidden');
+                cartText.textContent = `查看購物車 (${totalItems}項) ${totalPrice}`;
             } else {
-                cartSection.className = 'cart-section empty';
+                cartBtn.classList.add('hidden');
             }
         }
 
+        // 計算總價
+        function calculateTotal() {
+            let total = 0;
+            for (let itemId in cart) {
+                const price = itemPrices[itemId] || Object.values(menuItems[itemId].prices)[0];
+                total += price * cart[itemId];
+            }
+            return total;
+        }
+
+        // 顯示購物車
         function showCart() {
-            // 隱藏所有分類內容
-            document.querySelectorAll('.menu-items').forEach(item => {
-                item.classList.remove('active');
-            });
+            const cartModal = document.getElementById('cartModal');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
             
-            // 顯示購物車檢視
-            document.getElementById('cart-view').style.display = 'block';
-            
-            const cartItems = document.getElementById('cart-items');
             cartItems.innerHTML = '';
             
-            if (cart.length === 0) {
-                cartItems.innerHTML = '<div style="text-align: center; padding: 40px; color: #666; font-size: 1.3em;">購物車是空的<br>快去選擇美味餐點吧！</div>';
-            } else {
-                cart.forEach((item, index) => {
+            for (let itemId in cart) {
+                const item = menuItems[itemId];
+                if (item) {
+                    const price = Object.values(item.prices)[0];
+                    const subtotal = price * cart[itemId];
+                    
                     const cartItem = document.createElement('div');
                     cartItem.className = 'cart-item';
-                    
-                    let optionsText = '';
-                    if (item.selectedOptions && item.selectedOptions.length > 0) {
-                        optionsText = `<div class="cart-item-options">${item.selectedOptions.join(', ')}</div>`;
-                    }
-                    
                     cartItem.innerHTML = `
-                        <div class="cart-item-info">
-                            <div class="cart-item-name">${item.name}</div>
-                            ${optionsText}
-                            <div class="cart-item-price">${item.price} × ${item.quantity} = ${item.total}</div>
+                        <div>
+                            <div style="font-weight: 600;">${item.name}</div>
+                            <div style="font-size: 14px; color: #666;">數量: ${cart[itemId]} × ${price}</div>
                         </div>
-                        <button class="remove-btn" onclick="removeFromCart(${index})">移除</button>
+                        <div style="font-weight: 700; color: #e74c3c;">${subtotal}</div>
                     `;
                     cartItems.appendChild(cartItem);
-                });
-            }
-            
-            updateTotalPrice();
-        }
-
-        function removeFromCart(index) {
-            cart.splice(index, 1);
-            updateCartDisplay();
-            showCart();
-        }
-
-        function updateTotalPrice() {
-            const total = cart.reduce((sum, item) => sum + item.total, 0);
-            document.getElementById('total-price').textContent = `${total}`;
-        }
-
-        function hideCart() {
-            document.getElementById('cart-view').style.display = 'none';
-            // 顯示第一個分類（麵飯類）
-            document.querySelectorAll('.menu-items').forEach(item => {
-                item.classList.remove('active');
-            });
-            document.getElementById('noodles').classList.add('active');
-            
-            // 重置分類標籤
-            document.querySelectorAll('.category-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.querySelector('.category-tab').classList.add('active');
-        }
-
-        function selectDiningOption(option) {
-            selectedDiningOption = option;
-            
-            // 清除所有按鈕的選中狀態
-            document.querySelectorAll('.dining-btn').forEach(btn => {
-                btn.classList.remove('selected');
-            });
-            
-            // 設置選中的按鈕
-            if (option === '內用') {
-                document.getElementById('dine-in-btn').classList.add('selected');
-            } else if (option === '外帶') {
-                document.getElementById('takeout-btn').classList.add('selected');
-            }
-        }
-
-        function getCurrentDateTime() {
-            const now = new Date();
-            const year = now.getFullYear();
-            const month = String(now.getMonth() + 1).padStart(2, '0');
-            const day = String(now.getDate()).padStart(2, '0');
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            
-            return `${year}/${month}/${day} ${hours}:${minutes}`;
-        }
-
-        function generateOrderText() {
-            if (cart.length === 0) {
-                return null;
-            }
-            
-            const customerName = document.getElementById('customer-name').value.trim();
-            const customerPhone = document.getElementById('customer-phone').value.trim();
-            
-            if (!customerName || !customerPhone) {
-                alert('請填寫完整的顧客資訊！');
-                return null;
-            }
-            
-            if (!selectedDiningOption) {
-                alert('請選擇用餐方式！');
-                return null;
-            }
-            
-            let orderText = '🍜 姐妹小吃 - 線上訂單\n';
-            orderText += '=' + '='.repeat(25) + '\n\n';
-            
-            // 訂單時間
-            orderText += `📅 訂單時間：${getCurrentDateTime()}\n`;
-            orderText += `🍽️ 用餐方式：${selectedDiningOption}\n`;
-            orderText += `👤 顧客姓名：${customerName}\n`;
-            orderText += `📞 聯絡電話：${customerPhone}\n\n`;
-            
-            orderText += '🛒 訂購明細：\n';
-            orderText += '-'.repeat(30) + '\n';
-            
-            // 統計商品總數量
-            const totalItemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-            
-            cart.forEach((item, index) => {
-                orderText += `${index + 1}. ${item.name}`;
-                if (item.selectedOptions && item.selectedOptions.length > 0) {
-                    orderText += ` (${item.selectedOptions.join(', ')})`;
                 }
-                orderText += `\n   數量：${item.quantity}   金額：${item.total}\n\n`;
-            });
+            }
             
-            const total = cart.reduce((sum, item) => sum + item.total, 0);
-            orderText += '=' + '='.repeat(25) + '\n';
-            orderText += `📊 共 ${totalItemCount} 樣餐點\n`;
-            orderText += `💰 總金額：${total}\n\n`;
-            
-            orderText += '🏪 內用桌號：請現場安排\n';
-            orderText += '✅ 請確認訂單並回覆預計完成時間\n';
-            orderText += '❌ 如有問題請直接回覆說明';
-            
-            return orderText;
+            cartTotal.textContent = `總計: ${calculateTotal()}`;
+            cartModal.style.display = 'flex';
         }
 
-        function sendToLine() {
-            const orderText = generateOrderText();
-            if (!orderText) {
+        // 關閉購物車
+        function closeCart() {
+            document.getElementById('cartModal').style.display = 'none';
+        }
+
+        // 提交訂單
+        function submitOrder() {
+            if (Object.keys(cart).length === 0) {
+                alert('購物車是空的！');
                 return;
             }
             
-            // 建構 LINE URL Scheme
-            const encodedText = encodeURIComponent(orderText);
-            const lineUrl = `line://msg/text/${encodedText}`;
+            let orderText = '姊妹小吃訂單：\n\n';
+            let total = 0;
             
-            try {
-                // 嘗試開啟 LINE 應用程式
-                window.location.href = lineUrl;
-                
-                // 給使用者一些指引
-                setTimeout(() => {
-                    if (confirm('已嘗試開啟 LINE 應用程式。如果沒有自動開啟，請手動複製訂單內容到 LINE 傳送給店家。\n\n是否要清空購物車？')) {
-                        cart = [];
-                        selectedDiningOption = '';
-                        document.getElementById('customer-name').value = '';
-                        document.getElementById('customer-phone').value = '';
-                        document.querySelectorAll('.dining-btn').forEach(btn => {
-                            btn.classList.remove('selected');
-                        });
-                        updateCartDisplay();
-                        hideCart();
-                    }
-                }, 1000);
-                
-            } catch (error) {
-                // 如果無法開啟 LINE，提供備用方案
-                alert('無法開啟 LINE 應用程式。請手動複製以下訂單內容：\n\n' + orderText);
+            for (let itemId in cart) {
+                const item = menuItems[itemId];
+                if (item) {
+                    const price = Object.values(item.prices)[0];
+                    const subtotal = price * cart[itemId];
+                    total += subtotal;
+                    orderText += `${item.name} × ${cart[itemId]} = ${subtotal}\n`;
+                }
             }
+            
+            orderText += `\n總計: ${total}`;
+            orderText += '\n\n謝謝您的訂購！';
+            
+            alert(orderText);
+            
+            // 清空購物車
+            cart = {};
+            document.querySelectorAll('.quantity').forEach(qty => {
+                qty.textContent = '0';
+            });
+            updateCartButton();
+            closeCart();
         }
 
-        // 點擊彈窗外區域關閉彈窗
-        window.onclick = function(event) {
-            const modal = document.getElementById('item-modal');
-            if (event.target === modal) {
-                closeModal();
+        // 點擊選項
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('option')) {
+                e.target.classList.toggle('selected');
+                
+                // 獲取當前項目的ID
+                const menuItem = e.target.closest('.menu-item');
+                const itemId = getItemIdFromElement(menuItem);
+                
+                if (itemId) {
+                    // 收集所有選中的選項
+                    const selectedOptions = [];
+                    menuItem.querySelectorAll('.option.selected').forEach(option => {
+                        selectedOptions.push(option.textContent);
+                    });
+                    
+                    // 儲存選項
+                    itemOptions[itemId] = selectedOptions;
+                }
             }
+        });
+        
+        // 從DOM元素獲取項目ID的輔助函數
+        function getItemIdFromElement(menuItem) {
+            const qtyElement = menuItem.querySelector('[id^="qty-"]');
+            if (qtyElement) {
+                return qtyElement.id.replace('qty-', '');
+            }
+            return null;
         }
+
+        // 點擊彈窗外部關閉
+        document.getElementById('cartModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCart();
+            }
+        });
     </script>
 </body>
 </html>
