@@ -1030,49 +1030,31 @@
             document.querySelector('.category-tab').classList.add('active');
         }
 
-        // === 產生訂單文字 ===
-function generateOrderText(name, phone) {
-    const orderNumber = Date.now().toString().slice(-6);
-    let totalAmount = 0;
-    let totalItems = 0;
-    
-    let orderText = `🍜 姐妹小吃 - 新訂單\n`;
-    orderText += `📋 訂單編號：#${orderNumber}\n`;
-    orderText += `⏰ 時間：${new Date().toLocaleString('zh-TW')}\n`;
-    orderText += `${selectedDining === '內用' ? '🍽️' : '🥡'} 用餐方式：${selectedDining}\n`;
-    orderText += `👤 顧客姓名：${name}\n`;
-    orderText += `📞 聯絡電話：${phone}\n`;
-    orderText += `\n📝 點餐內容：\n`;
-    orderText += `━━━━━━━━━━━━━━━━\n`;
-    
-    Object.keys(cart).forEach(itemId => {
-        const quantity = cart[itemId];
-        const item = findItemById(parseInt(itemId));
-        if (item) {
-            const itemTotal = item.price * quantity;
-            totalAmount += itemTotal;
-            totalItems += quantity;
-            orderText += `${item.name} × ${quantity}\n`;
-            orderText += `單價 ${item.price} = ${itemTotal}\n\n`;
+        function generateOrderText() {
+            if (cart.length === 0) {
+                return null;
+            }
+            
+            let orderText = '🍜 姐妹小吃 - 線上訂單\n';
+            orderText += '=' + '='.repeat(25) + '\n\n';
+            
+            cart.forEach((item, index) => {
+                orderText += `${index + 1}. ${item.name}`;
+                if (item.selectedOptions && item.selectedOptions.length > 0) {
+                    orderText += ` (${item.selectedOptions.join(', ')})`;
+                }
+                orderText += `\n   數量：${item.quantity}   金額：${item.total}\n\n`;
+            });
+            
+            const total = cart.reduce((sum, item) => sum + item.total, 0);
+            orderText += '=' + '='.repeat(25) + '\n';
+            orderText += `💰 總金額：${total}\n\n`;
+            orderText += '📞 如需修改訂單請來電：\n';
+            orderText += '🏪 店家將為您準備美味餐點\n';
+            orderText += '⏰ 預計完成時間：15-20分鐘';
+            
+            return orderText;
         }
-    });
-    
-    orderText += `━━━━━━━━━━━━━━━━\n`;
-    orderText += `📊 總計：${totalItems} 項商品\n`;
-    orderText += `💰 總金額：${totalAmount}\n\n`;
-    
-    if (selectedDining === '內用') {
-        orderText += `🏪 內用桌號：請現場安排\n`;
-        orderText += `✅ 請確認訂單並回覆預計完成時間\n`;
-    } else {
-        orderText += `🥡 外帶訂單\n`;
-        orderText += `✅ 請確認訂單並回覆預計取餐時間\n`;
-    }
-    
-    orderText += `❌ 如有問題請直接回覆說明`;
-    
-    return orderText;
-}
 
         function checkout() {
             // 移除此功能，引導用戶使用 LINE
