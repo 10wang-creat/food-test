@@ -37,6 +37,9 @@
         .subtitle {
             font-size: 1.2em;
             opacity: 0.9;
+            white-space: nowrap; /* 防止換行 */
+            overflow: hidden; /* 隱藏溢出的文字 */
+            text-overflow: ellipsis; /* 如果太長顯示省略號 */
         }
 
         /* 頂部固定分類導航 */
@@ -557,6 +560,11 @@
                 font-size: 2em;
             }
             
+            .subtitle {
+                font-size: 1em; /* 在小螢幕上稍微減小字體 */
+                padding: 0 10px; /* 增加左右內距 */
+            }
+            
             .category-tabs {
                 padding: 0 15px;
                 gap: 6px;
@@ -611,6 +619,26 @@
             .input-field {
                 padding: 12px;
                 font-size: 1em;
+            }
+        }
+
+        /* 針對極小螢幕的額外調整 */
+        @media (max-width: 480px) {
+            .subtitle {
+                font-size: 0.9em; /* 進一步減小字體 */
+                line-height: 1.3; /* 調整行高 */
+            }
+            
+            .header {
+                padding: 15px 10px; /* 減少內距 */
+            }
+        }
+
+        /* 針對極小螢幕（320px寬度）的特殊調整 */
+        @media (max-width: 350px) {
+            .subtitle {
+                font-size: 0.8em; /* 更小的字體 */
+                padding: 0 5px; /* 更小的內距 */
             }
         }
     </style>
@@ -804,7 +832,7 @@
 
                     <div class="info-section">
                         <div class="info-title">
-                            👤 顾客資訊
+                            👤 顧客資訊
                         </div>
                         <div class="input-group">
                             <label class="input-label" for="customer-name">
