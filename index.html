@@ -1,103 +1,4 @@
-<div class="menu-item">
-                    <div class="item-name">麻油高麗菜湯</div>
-                    <div class="price-options">
-                        <div class="price-option selected" data-price="60" onclick="selectPrice('sesame-1', this, 60)">湯品 $60</div>
-                        <div class="price-option" data-price="80" onclick="selectPrice('sesame-1', this, 80)">加麵線 $80</div>
-                    </div>
-                    <div class="quantity-control">
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-1', -1)">-</button>
-                        <span class="quantity" id="qty-sesame-1">0</span>
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-1', 1)">+</button>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-name">麻油米血湯</div>
-                    <div class="price-options">
-                        <div class="price-option selected" data-price="60" onclick="selectPrice('sesame-2', this, 60)">湯品 $60</div>
-                        <div class="price-option" data-price="80" onclick="selectPrice('sesame-2', this, 80)">加麵線 $80</div>
-                    </div>
-                    <div class="quantity-control">
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-2', -1)">-</button>
-                        <span class="quantity" id="qty-sesame-2">0</span>
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-2', 1)">+</button>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-name">麻油腰內肉湯</div>
-                    <div class="price-options">
-                        <div class="price-option selected" data-price="90" onclick="selectPrice('sesame-3', this, 90)">湯品 $90</div>
-                        <div class="price-option" data-price="110" onclick="selectPrice('sesame-3', this, 110)">加麵線 $110</div>
-                    </div>
-                    <div class="options">
-                        <div class="option">加米酒</div>
-                    </div>
-                    <div class="quantity-control">
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-3', -1)">-</button>
-                        <span class="quantity" id="qty-sesame-3">0</span>
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-3', 1)">+</button>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-name">麻油雞湯</div>
-                    <div class="price-options">
-                        <div class="price-option selected" data-price="130" onclick="selectPrice('sesame-4', this, 130)">湯品 $130</div>
-                        <div class="price-option" data-price="150" onclick="selectPrice('sesame-4', this, 150)">加麵線 $150</div>
-                    </div>
-                    <div class="options">
-                        <div class="option">加米酒</div>
-                    </div>
-                    <div class="quantity-control">
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-4', -1)">-</button>
-                        <span class="quantity" id="qty-sesame-4">0</span>
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-4', 1)">+</button>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-name">麻油腰子湯</div>
-                    <div class="price-options">
-                        <div class="price-option selected" data-price="150" onclick="selectPrice('sesame-5', this, 150)">湯品 $150</div>
-                        <div class="price-option" data-price="170" onclick="selectPrice('sesame-5', this, 170)">加麵線 $170</div>
-                    </div>
-                    <div class="options">
-                        <div class="option">加米酒</div>
-                    </div>
-                    <div class="quantity-control">
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-5', -1)">-</button>
-                        <span class="quantity" id="qty-sesame-5">0</span>
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-5', 1)">+</button>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-name">麻油雞+腰子湯</div>
-                    <div class="price-options">
-                        <div class="price-option selected" data-price="180" onclick="selectPrice('sesame-6', this, 180)">湯品 $180</div>
-                        <div class="price-option" data-price="200" onclick="selectPrice('sesame-6', this, 200)">加麵線 $200</div>
-                    </div>
-                    <div class="options">
-                        <div class="option">加米酒</div>
-                    </div>
-                    <div class="quantity-control">
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-6', -1)">-</button>
-                        <span class="quantity" id="qty-sesame-6">0</span>
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-6', 1)">+</button>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-name">藥膳雞湯</div>
-                    <div class="price-options">
-                        <div class="price-option selected" data-price="130" onclick="selectPrice('sesame-7', this, 130)">湯品 $130</div>
-                        <div class="price-option" data-price="150" onclick="selectPrice('sesame-7', this, 150)">加麵線 $150</div>
-                    </div>
-                    <div class="quantity-control">
-                        <button class="quantity-btn" onclick="changeQuantity('sesame-7', -1)">-</button>
-                        <span class="quantity" id="qty-sesame-7">0</span>
-                <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -159,16 +60,17 @@
 
         .category-tabs {
             display: flex;
-            flex-wrap: wrap;
             background: #f8f9fa;
-            padding: 10px;
-            gap: 8px;
+            padding: 8px;
+            gap: 6px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .tab {
             flex: 1;
-            min-width: calc(50% - 4px);
-            padding: 12px 8px;
+            min-width: 80px;
+            padding: 10px 12px;
             background: white;
             border: 2px solid #e9ecef;
             border-radius: 12px;
@@ -176,7 +78,8 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
+            white-space: nowrap;
         }
 
         .tab.active {
@@ -188,8 +91,8 @@
         }
 
         .menu-content {
-            padding: 20px;
-            max-height: 60vh;
+            padding: 15px;
+            max-height: 65vh;
             overflow-y: auto;
         }
 
@@ -204,8 +107,8 @@
         .menu-item {
             background: white;
             border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 15px;
+            padding: 18px;
+            margin-bottom: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             border: 1px solid #f1f3f4;
             transition: all 0.3s ease;
@@ -362,6 +265,67 @@
             display: none;
         }
 
+        .customer-info {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .customer-info h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .info-row {
+            margin-bottom: 12px;
+        }
+
+        .info-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .info-input:focus {
+            outline: none;
+            border-color: #ff6b6b;
+        }
+
+        .service-type {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .service-option {
+            flex: 1;
+            padding: 12px;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .service-option:hover {
+            border-color: #ff6b6b;
+            transform: translateY(-1px);
+        }
+
+        .service-option.selected {
+            background: #ff6b6b;
+            color: white;
+            border-color: #ee5a52;
+        }
+
         .modal {
             position: fixed;
             top: 0;
@@ -402,6 +366,63 @@
 
         .cart-item:last-child {
             border-bottom: none;
+        }
+
+        .cart-item-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .cart-qty-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-qty-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(238,90,82,0.4);
+        }
+
+        .cart-qty-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .cart-qty {
+            font-weight: 600;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .remove-item-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .remove-item-btn:hover {
+            background: #c0392b;
+            transform: scale(1.05);
         }
 
         .cart-total {
@@ -446,14 +467,31 @@
         }
 
         .section-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: center;
-            padding: 15px;
+            padding: 12px;
             background: linear-gradient(135deg, #f8f9fa, #e9ecef);
             border-radius: 12px;
+        }
+
+        .clear-cart-btn {
+            background: #95a5a6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .clear-cart-btn:hover {
+            background: #7f8c8d;
+            transform: translateY(-1px);
         }
 
         @media (max-width: 480px) {
@@ -467,8 +505,14 @@
             }
             
             .tab {
-                font-size: 12px;
-                padding: 10px 6px;
+                font-size: 11px;
+                padding: 8px 10px;
+                min-width: 70px;
+            }
+            
+            .category-tabs {
+                padding: 6px;
+                gap: 4px;
             }
         }
     </style>
@@ -1128,18 +1172,35 @@
 
     <!-- 購物車按鈕 -->
     <button class="cart hidden" id="cartBtn" onclick="showCart()">
-        <span id="cartText">查看購物車</span>
+        <span id="cartText">我的點餐明細</span>
     </button>
 
     <!-- 購物車彈窗 -->
     <div class="modal" id="cartModal">
         <div class="modal-content">
-            <h2>🛒 我的訂單</h2>
+            <h2>📝 點餐清單</h2>
+            
+            <!-- 顧客資訊 -->
+            <div class="customer-info">
+                <h3>👤 顧客資訊</h3>
+                <div class="info-row">
+                    <input type="text" class="info-input" id="customerName" placeholder="請輸入姓名" maxlength="20">
+                </div>
+                <div class="info-row">
+                    <input type="tel" class="info-input" id="customerPhone" placeholder="請輸入電話" maxlength="15">
+                </div>
+                <div class="service-type">
+                    <div class="service-option selected" onclick="selectServiceType(this, 'dine-in')">🍽️ 內用</div>
+                    <div class="service-option" onclick="selectServiceType(this, 'takeout')">🥡 外帶</div>
+                </div>
+            </div>
+            
+            <button class="clear-cart-btn" onclick="clearCart()">清空點餐</button>
             <div id="cartItems"></div>
             <div class="cart-total" id="cartTotal">總計: $0</div>
             <div class="modal-buttons">
                 <button class="modal-btn secondary" onclick="closeCart()">繼續點餐</button>
-                <button class="modal-btn primary" onclick="submitOrder()">確認訂單</button>
+                <button class="modal-btn primary" onclick="submitOrder()">送出訂單</button>
             </div>
         </div>
     </div>
@@ -1151,6 +1212,21 @@
         // 選中的價格和選項
         let itemPrices = {};
         let itemOptions = {};
+        
+        // 服務類型 (內用/外帶)
+        let serviceType = 'dine-in';
+        
+        // 選擇服務類型
+        function selectServiceType(element, type) {
+            // 移除其他選項的選中狀態
+            document.querySelectorAll('.service-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // 設置當前選項為選中
+            element.classList.add('selected');
+            serviceType = type;
+        }
         
         // 選擇價格選項
         function selectPrice(itemId, element, price) {
@@ -1167,6 +1243,7 @@
             // 更新購物車顯示
             updateCartButton();
         }
+        
         const menuItems = {
             'noodles-1': { name: '綜合(米粉+麵)', prices: { small: 50, large: 60 }, options: ['不加蒜泥'] },
             'noodles-2': { name: '炒麵', prices: { small: 50, large: 60 }, options: ['不加蒜泥'] },
@@ -1250,9 +1327,81 @@
                 cart[itemId] = newQty;
             } else {
                 delete cart[itemId];
+                // 同時清除價格和選項資訊
+                delete itemPrices[itemId];
+                delete itemOptions[itemId];
             }
             
             updateCartButton();
+        }
+
+        // 在購物車中修改數量
+        function changeCartQuantity(itemId, change) {
+            if (!cart[itemId]) return;
+            
+            let newQty = cart[itemId] + change;
+            
+            if (newQty <= 0) {
+                // 移除項目
+                delete cart[itemId];
+                delete itemPrices[itemId];
+                delete itemOptions[itemId];
+                
+                // 更新主頁面的數量顯示
+                const qtyElement = document.getElementById(`qty-${itemId}`);
+                if (qtyElement) {
+                    qtyElement.textContent = '0';
+                }
+            } else {
+                cart[itemId] = newQty;
+                
+                // 更新主頁面的數量顯示
+                const qtyElement = document.getElementById(`qty-${itemId}`);
+                if (qtyElement) {
+                    qtyElement.textContent = newQty;
+                }
+            }
+            
+            updateCartButton();
+            showCart(); // 重新顯示購物車以更新內容
+        }
+
+        // 移除單個項目
+        function removeCartItem(itemId) {
+            delete cart[itemId];
+            delete itemPrices[itemId];
+            delete itemOptions[itemId];
+            
+            // 更新主頁面的數量顯示
+            const qtyElement = document.getElementById(`qty-${itemId}`);
+            if (qtyElement) {
+                qtyElement.textContent = '0';
+            }
+            
+            updateCartButton();
+            showCart(); // 重新顯示購物車
+        }
+
+        // 清空購物車
+        function clearCart() {
+            if (Object.keys(cart).length === 0) {
+                alert('點餐清單已經是空的！');
+                return;
+            }
+            
+            if (confirm('確定要清空點餐清單嗎？')) {
+                cart = {};
+                itemPrices = {};
+                itemOptions = {};
+                
+                // 重置所有數量顯示
+                document.querySelectorAll('.quantity').forEach(qty => {
+                    qty.textContent = '0';
+                });
+                
+                updateCartButton();
+                showCart(); // 重新顯示購物車
+            }
         }
 
         // 更新購物車按鈕
@@ -1265,7 +1414,7 @@
             
             if (totalItems > 0) {
                 cartBtn.classList.remove('hidden');
-                cartText.textContent = `查看購物車 (${totalItems}項) ${totalPrice}`;
+                cartText.textContent = `我的點餐明細 (${totalItems}項) ${totalPrice}`;
             } else {
                 cartBtn.classList.add('hidden');
             }
@@ -1289,22 +1438,36 @@
             
             cartItems.innerHTML = '';
             
-            for (let itemId in cart) {
-                const item = menuItems[itemId];
-                if (item) {
-                    const price = Object.values(item.prices)[0];
-                    const subtotal = price * cart[itemId];
-                    
-                    const cartItem = document.createElement('div');
-                    cartItem.className = 'cart-item';
-                    cartItem.innerHTML = `
-                        <div>
-                            <div style="font-weight: 600;">${item.name}</div>
-                            <div style="font-size: 14px; color: #666;">數量: ${cart[itemId]} × ${price}</div>
-                        </div>
-                        <div style="font-weight: 700; color: #e74c3c;">${subtotal}</div>
-                    `;
-                    cartItems.appendChild(cartItem);
+            if (Object.keys(cart).length === 0) {
+                cartItems.innerHTML = '<div style="text-align: center; color: #666; padding: 20px;">購物車是空的</div>';
+            } else {
+                for (let itemId in cart) {
+                    const item = menuItems[itemId];
+                    if (item) {
+                        const price = itemPrices[itemId] || Object.values(item.prices)[0];
+                        const subtotal = price * cart[itemId];
+                        const selectedOptions = itemOptions[itemId] || [];
+                        
+                        const cartItem = document.createElement('div');
+                        cartItem.className = 'cart-item';
+                        cartItem.innerHTML = `
+                            <div>
+                                <div style="font-weight: 600;">${item.name}</div>
+                                <div style="font-size: 14px; color: #666;">
+                                    單價: ${price}
+                                    ${selectedOptions.length > 0 ? ` | 選項: ${selectedOptions.join(', ')}` : ''}
+                                </div>
+                                <div class="cart-item-controls">
+                                    <button class="cart-qty-btn" onclick="changeCartQuantity('${itemId}', -1)">-</button>
+                                    <span class="cart-qty">${cart[itemId]}</span>
+                                    <button class="cart-qty-btn" onclick="changeCartQuantity('${itemId}', 1)">+</button>
+                                    <button class="remove-item-btn" onclick="removeCartItem('${itemId}')">移除</button>
+                                </div>
+                            </div>
+                            <div style="font-weight: 700; color: #e74c3c;">${subtotal}</div>
+                        `;
+                        cartItems.appendChild(cartItem);
+                    }
                 }
             }
             
@@ -1330,10 +1493,16 @@
             for (let itemId in cart) {
                 const item = menuItems[itemId];
                 if (item) {
-                    const price = Object.values(item.prices)[0];
+                    const price = itemPrices[itemId] || Object.values(item.prices)[0];
                     const subtotal = price * cart[itemId];
+                    const selectedOptions = itemOptions[itemId] || [];
+                    
                     total += subtotal;
-                    orderText += `${item.name} × ${cart[itemId]} = ${subtotal}\n`;
+                    orderText += `${item.name} × ${cart[itemId]} = ${subtotal}`;
+                    if (selectedOptions.length > 0) {
+                        orderText += ` (${selectedOptions.join(', ')})`;
+                    }
+                    orderText += '\n';
                 }
             }
             
@@ -1344,6 +1513,8 @@
             
             // 清空購物車
             cart = {};
+            itemPrices = {};
+            itemOptions = {};
             document.querySelectorAll('.quantity').forEach(qty => {
                 qty.textContent = '0';
             });
@@ -1386,6 +1557,16 @@
         document.getElementById('cartModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeCart();
+            }
+        });
+
+        // 初始化價格
+        document.addEventListener('DOMContentLoaded', function() {
+            // 為每個項目設置默認價格
+            for (let itemId in menuItems) {
+                const item = menuItems[itemId];
+                const defaultPrice = Object.values(item.prices)[0];
+                itemPrices[itemId] = defaultPrice;
             }
         });
     </script>
