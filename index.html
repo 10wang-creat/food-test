@@ -442,6 +442,54 @@
             margin-top: 20px;
         }
 
+        .custom-alert {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+            padding: 20px;
+        }
+
+        .custom-alert-content {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 300px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .custom-alert-message {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .custom-alert-button {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .custom-alert-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(238,90,82,0.4);
+        }
+
         .modal-btn {
             flex: 1;
             padding: 15px;
@@ -1189,6 +1237,14 @@
         </div>
     </div>
 
+    <!-- 自定義提示彈窗 -->
+    <div class="custom-alert" id="customAlert">
+        <div class="custom-alert-content">
+            <div class="custom-alert-message" id="customAlertMessage"></div>
+            <button class="custom-alert-button" onclick="closeCustomAlert()">確定</button>
+        </div>
+    </div>
+
     <script>
         // 購物車資料 - 現在包含價格和選項資訊
         let cart = {};
@@ -1196,6 +1252,16 @@
         // 選中的價格和選項
         let itemPrices = {};
         let itemOptions = {};
+        
+        // 自定義提示函數
+        function showCustomAlert(message) {
+            document.getElementById('customAlertMessage').textContent = message;
+            document.getElementById('customAlert').style.display = 'flex';
+        }
+        
+        function closeCustomAlert() {
+            document.getElementById('customAlert').style.display = 'none';
+        }
         
         // 服務類型 (內用/外帶)
         let serviceType = 'dine-in';
@@ -1445,7 +1511,7 @@
         // 提交訂單
         function submitOrder() {
             if (Object.keys(cart).length === 0) {
-                alert('購物車是空的！');
+                showCustomAlert('購物車是空的！');
                 return;
             }
             
@@ -1453,12 +1519,12 @@
             const customerPhone = document.getElementById('customerPhone').value.trim();
             
             if (!customerName) {
-                alert('請輸入姓名');
+                showCustomAlert('請輸入姓名');
                 return;
             }
             
             if (!customerPhone) {
-                alert('請輸入電話');
+                showCustomAlert('請輸入電話');
                 return;
             }
             
@@ -1469,7 +1535,7 @@
             // 用餐方式
             const serviceTypeText = serviceType === 'dine-in' ? '🍽️ 內用' : '🥡 外帶';
             
-            let orderText = `📋 姊妹小吃訂單\n\n`;
+            let orderText = `🏪 姊妹小吃訂單\n\n`;
             orderText += `🕐 訂單時間：${orderTime}\n`;
             orderText += `📍 用餐方式：${serviceTypeText}\n`;
             orderText += `👤 顾客姓名：${customerName}\n`;
@@ -1498,7 +1564,7 @@
                 }
             }
             
-            orderText += `====================\n`;
+            orderText += `\n====================\n`;
             orderText += `📊 商品數量統計：共 ${totalItems} 項\n`;
             orderText += `💰 總金額：${total}\n\n`;
             
