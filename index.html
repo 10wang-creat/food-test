@@ -1448,8 +1448,35 @@
                 return;
             }
             
-            let orderText = '姊妹小吃訂單：\n\n';
+            const customerName = document.getElementById('customerName').value.trim();
+            const customerPhone = document.getElementById('customerPhone').value.trim();
+            
+            if (!customerName) {
+                alert('請輸入姓名');
+                return;
+            }
+            
+            if (!customerPhone) {
+                alert('請輸入電話');
+                return;
+            }
+            
+            // 獲取當前時間
+            const now = new Date();
+            const orderTime = `${now.getFullYear()}/${(now.getMonth()+1).toString().padStart(2,'0')}/${now.getDate().toString().padStart(2,'0')} ${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+            
+            // 用餐方式
+            const serviceTypeText = serviceType === 'dine-in' ? '🍽️ 內用' : '🥡 外帶';
+            
+            let orderText = `📋 姊妹小吃訂單\n\n`;
+            orderText += `🕐 訂單時間：${orderTime}\n`;
+            orderText += `📍 用餐方式：${serviceTypeText}\n`;
+            orderText += `👤 顾客姓名：${customerName}\n`;
+            orderText += `📞 聯絡電話：${customerPhone}\n\n`;
+            orderText += `🍜 餐點明細：\n`;
+            
             let total = 0;
+            let totalItems = 0;
             
             for (let itemId in cart) {
                 const item = menuItems[itemId];
@@ -1459,7 +1486,9 @@
                     const selectedOptions = itemOptions[itemId] || [];
                     
                     total += subtotal;
-                    orderText += `${item.name} × ${cart[itemId]} = ${subtotal}`;
+                    totalItems += cart[itemId];
+                    
+                    orderText += `• ${item.name} × ${cart[itemId]} = ${subtotal}`;
                     if (selectedOptions.length > 0) {
                         orderText += ` (${selectedOptions.join(', ')})`;
                     }
@@ -1467,10 +1496,21 @@
                 }
             }
             
-            orderText += `\n總計: ${total}`;
-            orderText += '\n\n謝謝您的訂購！';
+            orderText += `\n📊 商品數量統計：共 ${totalItems} 項\n`;
+            orderText += `💰 總金額：${total}\n\n`;
             
-            alert(orderText);
+            if (serviceType === 'dine-in') {
+                orderText += `🏪 內用桌號：請現場安排\n`;
+            }
+            
+            orderText += `✅ 請確認訂單並回覆預計完成時間\n`;
+            orderText += `❌ 如有問題請直接回覆說明`;
+            
+            // 使用 LINE URL Scheme 傳送訊息
+            const lineUrl = `https://line.me/R/msg/text/?${encodeURIComponent(orderText)}`;
+            
+            // 開啟 LINE 傳送訊息
+            window.open(lineUrl, '_blank');
             
             // 清空購物車
             cart = {};
@@ -1479,6 +1519,11 @@
             document.querySelectorAll('.quantity').forEach(qty => {
                 qty.textContent = '0';
             });
+            
+            // 清空顧客資訊
+            document.getElementById('customerName').value = '';
+            document.getElementById('customerPhone').value = '';
+            
             updateCartButton();
             closeCart();
         }
