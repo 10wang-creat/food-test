@@ -477,23 +477,6 @@
             border-radius: 12px;
         }
 
-        .clear-cart-btn {
-            background: #95a5a6;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 14px;
-            cursor: pointer;
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .clear-cart-btn:hover {
-            background: #7f8c8d;
-            transform: translateY(-1px);
-        }
-
         @media (max-width: 480px) {
             .container {
                 border-radius: 0;
@@ -1178,26 +1161,26 @@
     <!-- 購物車彈窗 -->
     <div class="modal" id="cartModal">
         <div class="modal-content">
-            <h2>📝 點餐清單</h2>
+            <h2>📝 訂單明細</h2>
+            
+            <div id="cartItems"></div>
+            <div class="cart-total" id="cartTotal">總計: $0</div>
             
             <!-- 顧客資訊 -->
             <div class="customer-info">
-                <h3>👤 顧客資訊</h3>
+                <h3>👤 訂餐人資訊</h3>
+                <div class="service-type">
+                    <div class="service-option selected" onclick="selectServiceType(this, 'dine-in')">🍽️ 內用</div>
+                    <div class="service-option" onclick="selectServiceType(this, 'takeout')">🥡 外帶</div>
+                </div>
                 <div class="info-row">
                     <input type="text" class="info-input" id="customerName" placeholder="請輸入姓名" maxlength="20">
                 </div>
                 <div class="info-row">
                     <input type="tel" class="info-input" id="customerPhone" placeholder="請輸入電話" maxlength="15">
                 </div>
-                <div class="service-type">
-                    <div class="service-option selected" onclick="selectServiceType(this, 'dine-in')">🍽️ 內用</div>
-                    <div class="service-option" onclick="selectServiceType(this, 'takeout')">🥡 外帶</div>
-                </div>
             </div>
             
-            <button class="clear-cart-btn" onclick="clearCart()">清空點餐</button>
-            <div id="cartItems"></div>
-            <div class="cart-total" id="cartTotal">總計: $0</div>
             <div class="modal-buttons">
                 <button class="modal-btn secondary" onclick="closeCart()">繼續點餐</button>
                 <button class="modal-btn primary" onclick="submitOrder()">送出訂單</button>
@@ -1382,28 +1365,6 @@
             showCart(); // 重新顯示購物車
         }
 
-        // 清空購物車
-        function clearCart() {
-            if (Object.keys(cart).length === 0) {
-                alert('點餐清單已經是空的！');
-                return;
-            }
-            
-            if (confirm('確定要清空點餐清單嗎？')) {
-                cart = {};
-                itemPrices = {};
-                itemOptions = {};
-                
-                // 重置所有數量顯示
-                document.querySelectorAll('.quantity').forEach(qty => {
-                    qty.textContent = '0';
-                });
-                
-                updateCartButton();
-                showCart(); // 重新顯示購物車
-            }
-        }
-
         // 更新購物車按鈕
         function updateCartButton() {
             const cartBtn = document.getElementById('cartBtn');
@@ -1439,7 +1400,7 @@
             cartItems.innerHTML = '';
             
             if (Object.keys(cart).length === 0) {
-                cartItems.innerHTML = '<div style="text-align: center; color: #666; padding: 20px;">購物車是空的</div>';
+                cartItems.innerHTML = '<div style="text-align: center; color: #666; padding: 20px;">您還沒點餐喔，請先選擇想吃的餐點～</div>';
             } else {
                 for (let itemId in cart) {
                     const item = menuItems[itemId];
