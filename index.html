@@ -1400,7 +1400,7 @@
             cartItems.innerHTML = '';
             
             if (Object.keys(cart).length === 0) {
-                cartItems.innerHTML = '<div style="text-align: center; color: #666; padding: 20px;">您還沒點餐喔，請先選擇想吃的餐點～</div>';
+                cartItems.innerHTML = '<div style="text-align: center; color: #666; padding: 20px; white-space: nowrap;">您還沒點餐喔，請先選擇想吃的餐點～</div>';
             } else {
                 for (let itemId in cart) {
                     const item = menuItems[itemId];
